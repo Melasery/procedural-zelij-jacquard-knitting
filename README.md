@@ -1,30 +1,31 @@
-# Zelix: Computational Zelij for Machine Knitting
+# Procedural Zelij: Computational Jacquard Knitting
 
-This project focuses on the procedural generation of complex Moroccan Zelij patterns for tubular jacquard machine knitting. It leverages algorithmic design to map geometric tiles onto knit structures, specifically targeting the generation of `.knitout` files for industrial knitting machines (like Shima Seiki).
+**Tubular Jacquard Generation | Algorithmic Design | Digital Fabrication**
 
-## Overview
+This project implements a computational pipeline for generating complex Moroccan Zelij patterns and translating them into machine-knittable instructions (Knitout). It addresses the challenge of mapping rigorous geometric tilework onto the constrained grid of a weft-knitted structure while maintaining structural integrity and pattern definition.
 
-Zelij is a style of mosaic tilework made from individually hand-chiseled geometric tiles set into a plaster base. This project translates the intricate symmetry and logic of traditional Moroccan tilework into the domain of computational fabrication.
+## Technical Overview
 
-## Features
+The core of this project is a procedural generation engine that:
+1.  **Pattern Synthesis**: Algorithmically generates families of Zelij patterns based on traditional geometric rules.
+2.  **Tubular Jacquard Mapping**: Converts 2D pixel data into a double-bed tubular structure, managing float lengths and color separation automatically.
+3.  **Knitout Generation**: Outputs low-level `.knitout` code compatible with industrial flat-bed knitting machines (e.g., Shima Seiki), providing direct control over racking, yarn carriers, and needle selection.
 
-- **Procedural Pattern Generation**: Algorithms to generate symmetric and complex geometric motifs.
-- **Tubular Jacquard Mapping**: Specialized mapping for double-bed jacquard knitting to ensure structural integrity and pattern definition.
-- **Knitout Output**: Direct generation of `.knitout` code for seamless fabrication.
+## Key Features
 
-## Files
-
-- `chamomile.js`: The core procedural generation and knit-mapping script.
-- `zellij.k`: A sample generated knitout file representing a complex pattern.
-- `images/`: Visual references and generated pattern previews.
+*   **Algorithmic Design**: Parametric generation of tile patterns.
+*   **Fabrication-Aware**: Automated handling of knitting constraints (floats, stitch density).
+*   **Direct Control**: Bypasses proprietary design software by generating machine code directly.
 
 ## Usage
 
-The generation script requires Node.js and depends on common image processing libraries like `pngjs` for tile-based input (if used).
+running the generation script (requires Node.js):
 
 ```bash
-node chamomile.js <pattern_input.png>
+node chamomile.js <input_pattern.png>
 ```
 
+The output is a `.k` file ready for machine processing.
+
 ---
-*Developed as part of Marouan El-Asery's work in Computational Textiles.*
+*Part of the Computational Textiles portfolio.*
