@@ -28,4 +28,3 @@ node chamomile.js <input_pattern.png>
 The output is a `.k` file ready for machine processing.
 
 ---
-*Part of the Computational Textiles portfolio.*
